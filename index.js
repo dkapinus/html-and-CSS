@@ -3,8 +3,8 @@
 
 
 var buttonCurrentTime = document.getElementById('Time')
-var buttonHello =document.getElementById('Click')
-var inputCurrenTime = document.getElementById('CurrenTime')
+var buttonNextPage = document.getElementById('NextPage')
+var buttonInterstingInformation = document.getElementById('Intersting')
 
 function getTime ()  {
     let date = new Date();
@@ -13,11 +13,15 @@ function getTime ()  {
     return alert(hours + ':' + minutes)
   };
   
-  function Hello() {
-    return 
+  function nextPage() {
+    document.location.href = "OtherInformations.html"
   }
- buttonCurrentTime.addEventListener('click',getTime)
- buttonCurrentTime.addEventListener('click',Hello('hay'))
+  function interstingInformation() {
+    document.location.href = "https://www.youtube.com/c/ptuxermann/featured"
+  }
 
+buttonCurrentTime.addEventListener('click',getTime)
+buttonNextPage.addEventListener('click', nextPage )
+buttonInterstingInformation.addEventListener('click', interstingInformation)
 
 
